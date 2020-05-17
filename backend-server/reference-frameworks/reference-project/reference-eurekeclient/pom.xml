@@ -4,9 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.sc.framework.hoxton.reference</groupId>
-		<artifactId>reference-project</artifactId>
+  		<artifactId>reference-project</artifactId>
 		<version>1.0.0</version>
-		<relativePath>../../reference-project</relativePath>
 	</parent>
 	<artifactId>reference-eurekeclient</artifactId>
 	<packaging>pom</packaging>

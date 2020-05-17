@@ -10,7 +10,6 @@
 	<description>系统内部引用的jar管理</description>
 
 	<modules>
-		<module>reference-eurekeclient</module>
 		<module>reference-project</module>
 	</modules>
 	

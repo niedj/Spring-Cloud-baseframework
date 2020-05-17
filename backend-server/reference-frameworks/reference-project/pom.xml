@@ -7,6 +7,10 @@
   </parent>
   <artifactId>reference-project</artifactId>
   <packaging>pom</packaging>
+  
+  <modules>
+    <module>reference-eurekeclient</module>
+  </modules>
   <dependencies>
   	<dependency>
   		<groupId>com.sc.framework.hoxton.basecomponent</groupId>
