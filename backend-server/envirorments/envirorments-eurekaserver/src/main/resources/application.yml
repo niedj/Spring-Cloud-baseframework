@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: spring-cloud-eureka
+  profiles:
+    active: peer1
+  main:
+    allow-bean-definition-overriding: true
+    
+server:
+  port: 8000
+eureka:
+  server:
+# 测试时关闭自我保护机制，保证不可用服务及时踢出
+    enable-self-preservation: false
+  instance:
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+    prefer-ip-address: true
+    ip-address: 192.168.1.9
+    hostname: 192.168.1.9
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url: 
+      defaultZone: http://172.17.32.58:8000/eureka/
+#       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#访问路径，配置后就和1.x版本路径一样
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,bus-refresh,shutdown
+  endpoint:
+    shutdown:
+      enabled: true #是否开启优雅停机
+      shutdown-time: 30 #强制停机时间(默认60)
+      shutdown-time-unit: SECONDS   #强制停机时间单位(默认SECONDS)
+      health-wait-time: 10 #关闭前等待健康监测时间(默认10),即在请求shutdown接口时,会延时这个时间进行Shutdown操作
+      health-wait-time-unit: SECONDS   #关闭前等待健康监测时间单位(默认SECONDS),即在请求shutdown接口时,会延时这个时间进行Shutdown操作
