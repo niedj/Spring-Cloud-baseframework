@@ -1,0 +1,46 @@
+server:
+  port: 7000
+spring:
+  application:
+    name: envirorment-configserver
+  cloud:
+    config:
+      # 配置仓库的分支
+      label: master
+      server:
+        svn:
+          uri: http://172.28.96.140/svn/ms-config
+          username: dev
+          password: dev
+        default-label: trunk
+  profiles:
+    active: subversion
+  bus:
+    enabled: true
+  trace:
+    enabled: true
+  main:
+    allow-bean-definition-overriding: true
+    
+encrypt:
+  key: 
+
+eureka:
+  client:
+    service-url:
+#      defaultZone: http://root:root@localhost:18761/eureka/
+      defaultZone: http://172.17.32.58:8000/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,bus-refresh,shutdown
+  endpoint:
+    shutdown:
+      enabled: true #是否开启优雅停机
+      shutdown-time: 30 #强制停机时间(默认60)
+      shutdown-time-unit: SECONDS   #强制停机时间单位(默认SECONDS)
+      health-wait-time: 10 #关闭前等待健康监测时间(默认10),即在请求shutdown接口时,会延时这个时间进行Shutdown操作
+      health-wait-time-unit: SECONDS   #关闭前等待健康监测时间单位(默认SECONDS),即在请求shutdown接口时,会延时这个时间进行Shutdown操作
+        
