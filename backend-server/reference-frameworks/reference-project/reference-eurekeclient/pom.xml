@@ -6,6 +6,7 @@
 		<groupId>com.sc.framework.hoxton.reference</groupId>
   		<artifactId>reference-project</artifactId>
 		<version>1.0.0</version>
+		<relativePath>../</relativePath>
 	</parent>
 	<artifactId>reference-eurekeclient</artifactId>
 	<packaging>pom</packaging>

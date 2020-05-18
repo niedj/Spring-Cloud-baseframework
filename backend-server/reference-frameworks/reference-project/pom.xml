@@ -4,6 +4,7 @@
     <groupId>com.sc.framework.hoxton.reference</groupId>
     <artifactId>reference-pom</artifactId>
     <version>1.0.0</version>
+    <relativePath>../</relativePath>
   </parent>
   <artifactId>reference-project</artifactId>
   <packaging>pom</packaging>
