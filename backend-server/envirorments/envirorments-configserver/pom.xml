@@ -5,11 +5,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.sc.framework.hoxton.reference</groupId>
-		<artifactId>reference-eurekeclient</artifactId>
+		<artifactId>reference-eurekaclient</artifactId>
 		<version>1.0.0</version>
-		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.sc.framework.hoxton</groupId>
+	<groupId>com.sc</groupId>
 	<artifactId>envirorments-configserver</artifactId>
 	<name>configserver</name>
 	<description>Framework Configer Server</description>
@@ -24,7 +23,10 @@
 	        <groupId>org.tmatesoft.svnkit</groupId>
 	        <artifactId>svnkit</artifactId>
 	    </dependency>
+	    <dependency>
+	    	<groupId>com.sc.framework.hoxton.basecomponent</groupId>
+	    	<artifactId>sc-shutdown</artifactId>
+	    </dependency>
 	</dependencies>
-
 
 </project>

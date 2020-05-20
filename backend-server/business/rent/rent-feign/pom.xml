@@ -1,0 +1,22 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.sc.business</groupId>
+    <artifactId>rent</artifactId>
+    <version>1.0.0</version>
+    <relativePath />
+  </parent>
+  <artifactId>rent-feign</artifactId>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.sc.framework.hoxton.reference</groupId>
+  		<artifactId>reference-feign</artifactId>
+  		<type>pom</type>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.sc.framework.hoxton.reference</groupId>
+  		<artifactId>reference-mybatis</artifactId>
+  		<type>pom</type>
+  	</dependency>
+  </dependencies>
+</project>

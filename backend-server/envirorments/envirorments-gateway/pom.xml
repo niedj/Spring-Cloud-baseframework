@@ -5,28 +5,49 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.sc.framework.hoxton.reference</groupId>
-		<artifactId>reference-eurekeclient</artifactId>
+		<artifactId>reference-business</artifactId>
 		<version>1.0.0</version>
-		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
+	<groupId>com.sc</groupId>
 	<artifactId>envirorments-gateway</artifactId>
 	<name>gateway</name>
-	<description>gateway</description>
+	<description>Framework Gateway Server</description>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
-		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-gateway</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-consul-discovery</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-web</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
+		<dependency>
+			<groupId>com.sc.framework.hoxton.basecomponent</groupId>
+			<artifactId>sc-shutdown</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-web</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-json</artifactId>
+		</dependency>
+		<!-- <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
+		</dependency> -->
 	</dependencies>
 
 </project>

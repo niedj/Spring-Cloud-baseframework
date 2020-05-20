@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.sc.framework.hoxton.reference</groupId>
-		<artifactId>reference-project</artifactId>
+		<artifactId>reference-frameworks</artifactId>
 		<version>1.0.0</version>
 	</parent>
 	<groupId>com.sc</groupId>
@@ -18,6 +18,10 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.sc.framework.hoxton.basecomponent</groupId>
+			<artifactId>sc-shutdown</artifactId>
 		</dependency>
 	</dependencies>
 

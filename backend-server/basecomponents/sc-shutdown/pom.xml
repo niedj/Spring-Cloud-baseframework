@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.sc.framework.hoxton.reference</groupId>
-		<artifactId>reference-pom</artifactId>
+		<artifactId>reference-frameworks</artifactId>
 		<version>1.0.0</version>
 	</parent>
 	<groupId>com.sc.framework.hoxton.basecomponent</groupId>
