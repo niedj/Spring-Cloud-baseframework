@@ -3,11 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.tico.framework</groupId>
+		<groupId>com.gxlu.framework</groupId>
 		<artifactId>reference-frameworks</artifactId>
 		<version>1.0.0</version>
 	</parent>
-	<groupId>com.tico.framework.commonreference</groupId>
-	<artifactId>reference-commonrelation</artifactId>
+	<artifactId>reference-commonreference</artifactId>
 	<packaging>pom</packaging>
 </project>
