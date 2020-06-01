@@ -2,7 +2,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.sc.framework.hoxton.reference</groupId>
+	<groupId>com.gxlu.framework</groupId>
 	<artifactId>reference-frameworks</artifactId>
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
@@ -10,8 +10,8 @@
 	<description>系统内部引用的jar管理</description>
 
 	<modules>
-		<module>reference-eurekaclient</module>
-		<module>reference-mybatis</module>
+		<module>reference-springcloud</module>
+		<module>reference-commonreference</module>
 	</modules>
 
 	<parent>
@@ -35,48 +35,11 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<spring-cloud.version>Hoxton.SR4</spring-cloud.version>
-		<spring-boot.version>2.3.0.RELEASE</spring-boot.version>
 		<fastjson.version>1.2.46</fastjson.version>
 	</properties>
 
 	<!--微服务的监控，完成监控治理 -->
 	<dependencies>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.junit.vintage</groupId>
-					<artifactId>junit-vintage-engine</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-
-		<!--Hystrix 仪表盘 <dependency> <groupId>org.springframework.cloud</groupId> 
-			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId> </dependency> 
-			<dependency> <groupId>org.springframework.cloud</groupId> <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId> 
-			</dependency> -->
-		<!-- <dependency> <groupId>org.springframework.cloud</groupId> <artifactId>spring-cloud-starter-zipkin</artifactId> 
-			</dependency> <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-security</artifactId> 
-			</dependency> -->
-		<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on 
-			<dependency> <groupId>org.bouncycastle</groupId> <artifactId>bcprov-jdk15on</artifactId> 
-			<version>1.60</version> </dependency> -->
-		<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec <dependency> 
-			<groupId>commons-codec</groupId> <artifactId>commons-codec</artifactId> </dependency> -->
-		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 
-			<dependency> <groupId>org.apache.commons</groupId> <artifactId>commons-lang3</artifactId> 
-			</dependency> -->
-
-		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok <dependency> 
-			<groupId>org.projectlombok</groupId> <artifactId>lombok</artifactId> <scope>provided</scope> 
-			</dependency> -->
 
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -89,26 +52,8 @@
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter</artifactId>
 		</dependency>
+
 	</dependencies>
-
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>${spring-cloud.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-
-			<dependency>
-				<groupId>com.sc.framework.hoxton.basecomponent</groupId>
-				<artifactId>sc-shutdown</artifactId>
-				<version>1.0.0</version>
-			</dependency>
-
-		</dependencies>
-	</dependencyManagement>
 
 	<build>
 		<plugins>
@@ -139,13 +84,9 @@
 	</build>
 
 	<distributionManagement>
-		<repository>
-			<id>rdc-releases</id>
-			<url>https://repo.rdc.aliyun.com/repository/130695-release-TPX4Q8/</url>
-		</repository>
-		<snapshotRepository>
-			<id>rdc-snapshots</id>
-			<url>https://repo.rdc.aliyun.com/repository/130695-snapshot-xKrnRX/</url>
-		</snapshotRepository>
+        <repository>
+            <id>maven-releases</id>
+            <url>http://61.152.172.130:9080/nexus/repository/maven-releases/</url>
+        </repository>
 	</distributionManagement>
 </project>
