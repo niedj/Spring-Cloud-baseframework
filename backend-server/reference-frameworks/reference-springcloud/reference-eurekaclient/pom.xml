@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.tico.framework.springcloud</groupId>
+		<artifactId>reference-springcloud</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<groupId>com.tico.framework.springcloud.eurekaclient</groupId>
+	<artifactId>reference-eurekaclient</artifactId>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>reference-business</module>
+	</modules>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sc.framework.hoxton.basecomponent</groupId>
+			<artifactId>sc-shutdown</artifactId>
+		</dependency>
+	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+
+			<dependency>
+				<groupId>com.tico.framework.springcloud</groupId>
+				<artifactId>reference-springcloud</artifactId>
+				<version>1.0.0</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency>
+
+			<dependency>
+				<groupId>com.sc.framework.hoxton.basecomponent</groupId>
+				<artifactId>sc-shutdown</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+</project>

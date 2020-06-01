@@ -1,0 +1,75 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.tico.framework</groupId>
+		<artifactId>reference-frameworks</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<groupId>com.tico.framework.springcloud</groupId>
+	<artifactId>reference-springcloud</artifactId>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>reference-eurekaclient</module>
+		<module>reference-mybatis</module>
+	</modules>
+
+	<properties>
+		<spring-cloud.version>Hoxton.SR4</spring-cloud.version>
+		<spring-boot.version>2.3.0.RELEASE</spring-boot.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<!--Hystrix 仪表盘 <dependency> <groupId>org.springframework.cloud</groupId> 
+			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId> </dependency> 
+			<dependency> <groupId>org.springframework.cloud</groupId> <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId> 
+			</dependency> -->
+		<!-- <dependency> <groupId>org.springframework.cloud</groupId> <artifactId>spring-cloud-starter-zipkin</artifactId> 
+			</dependency> <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-security</artifactId> 
+			</dependency> -->
+		<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on 
+			<dependency> <groupId>org.bouncycastle</groupId> <artifactId>bcprov-jdk15on</artifactId> 
+			<version>1.60</version> </dependency> -->
+		<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec <dependency> 
+			<groupId>commons-codec</groupId> <artifactId>commons-codec</artifactId> </dependency> -->
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 
+			<dependency> <groupId>org.apache.commons</groupId> <artifactId>commons-lang3</artifactId> 
+			</dependency> -->
+
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok <dependency> 
+			<groupId>org.projectlombok</groupId> <artifactId>lombok</artifactId> <scope>provided</scope> 
+			</dependency> -->
+
+	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+</project>
