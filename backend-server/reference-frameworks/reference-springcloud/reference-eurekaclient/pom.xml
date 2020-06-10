@@ -51,4 +51,20 @@
 		</dependencies>
 	</dependencyManagement>
 
+	<repositories>
+		<repository>
+			<id>maven-public</id>
+			<name>maven-public Repository</name>
+			<url>http://61.152.172.130:9080/nexus/repository/maven-public/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+	<distributionManagement>
+		<repository>
+			<id>rdc-releases</id>
+			<url>https://repo.rdc.aliyun.com/repository/130695-release-TPX4Q8</url>
+		</repository>
+	</distributionManagement>
 </project>
